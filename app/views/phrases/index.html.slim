@@ -1,0 +1,15 @@
+#callouts.row
+  .col-sm-6
+    .alert.alert-info
+      |
+        Contribute to the budding short stories below
+  .col-sm-6
+    .alert.alert-info.clearfix
+      .pull-left Or start your own...
+      .pull-right
+        == link_to 'Go', new_phrase_path
+
+.row
+  .col-sm-12
+    ul.list-unstyled
+      == render @phrases

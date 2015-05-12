@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Text:
+  = @phrase.text
+p
+  strong Parent:
+  = @phrase.parent_id
+p
+  strong Child count:
+  = @phrase.child_count
+p
+  strong Match count:
+  = @phrase.match_count
+
+= link_to 'Edit', edit_phrase_path(@phrase)
+'|
+= link_to 'Back', phrases_path

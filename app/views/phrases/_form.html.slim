@@ -1,0 +1,21 @@
+= form_for @phrase do |f|
+  - if @phrase.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@phrase.errors.count, "error")} prohibited this phrase from being saved:"
+      ul
+        - @phrase.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :text
+    = f.text_field :text
+  .field
+    = f.label :parent_id
+    = f.number_field :parent_id
+  .field
+    = f.label :child_count
+    = f.number_field :child_count
+  .field
+    = f.label :match_count
+    = f.number_field :match_count
+  .actions = f.submit

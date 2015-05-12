@@ -5,12 +5,12 @@ html
     title
       = content_for?(:title) ? yield(:title) : 'Collaborative Short Stories'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Collaborative Short Stories'}"
-    == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
+    == stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true
     == javascript_include_tag 'application', 'data-turbolinks-track' => true
     == csrf_meta_tags
   body
     header
       == render 'layouts/navigation'
-    main[role="main"]
+    .container
       == render 'layouts/messages'
       == yield
