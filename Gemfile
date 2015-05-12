@@ -15,6 +15,8 @@ gem 'high_voltage'
 gem 'pg'
 gem 'slim-rails'
 gem 'bootstrap-generators'
+gem 'devise'
+gem "pg"
 
 group :development do
   gem 'better_errors'
