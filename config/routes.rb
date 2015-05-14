@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root to: 'phrases#index'
   
-  resources :phrases, only: [:index, :new] do
+  resources :phrases do
     resources :phrase_collabs, only: [:new]
   end
 
